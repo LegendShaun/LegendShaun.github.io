@@ -37,7 +37,7 @@ spi_init_struct.cs_mode_selection = SPI_CS_SOFTWARE_MODE;
 
 根据读取数据的时序图
 
-![image-20251105100335789](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20251105100335789.png)
+![时序图](../images/posts_images/pmd040硬件spi/iamge1.png)
 
 可以看出,在读取数据的过程中需要产生27个时钟信号,但是由于硬件SPI一次性只能产生最低8个时钟信号,因此我们只能产生32个时钟信号,然后忽略到多余的信号. 并且由于24位ADC数据都是在前面24个时钟信号进行传输,在读取数据的过程,我们只需要读取前24个时钟的数据.
 
