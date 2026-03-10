@@ -14,5 +14,5 @@ fetch("posts/" + file)
 .then(md => {
     
     document.getElementById("content").innerHTML = marked.parse(md);
-
+    hljs.highlightAll();
 });
